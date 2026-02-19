@@ -2,7 +2,7 @@
 
 Определение веб-краулеров (ботов) по User-Agent и защита форм от спама без CAPTCHA. Использует [JayBizzle/Crawler-Detect](https://github.com/JayBizzle/Crawler-Detect).
 
-**Требования:** MODX Revolution 3.x, PHP 7.4+
+**Требования:** MODX Revolution 3.x, PHP 8.2+
 
 ## Установка
 

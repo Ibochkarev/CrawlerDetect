@@ -41,7 +41,7 @@ CrawlerDetect — дополнение для MODX, которое опреде�
 ### Требования
 
 - MODX Revolution 3.x
-- PHP 7.4+ (рекомендуется PHP 8.3)
+- PHP 8.2+ (минимальная версия для MODX 3)
 - FormIt (для защиты форм)
 - FetchIt (опционально, для AJAX-форм)
 
@@ -129,8 +129,14 @@ CrawlerDetect — дополнение для MODX, которое опреде�
 
 Добавьте `crawlerDetectBlock` в `&preHooks` вызова FormIt. Если у вас уже есть другие preHooks, перечислите их через запятую:
 
+**MODX:**
 ```modx
 &preHooks=`crawlerDetectBlock,другойХук`
+```
+
+**Fenom:**
+```fenom
+'preHooks' => 'crawlerDetectBlock,другойХук'
 ```
 
 ### AJAX-форма (FetchIt)
@@ -178,11 +184,24 @@ FetchIt обрабатывает формы через FormIt на сервер�
 
 ### Не подключать аналитику ботам
 
+**MODX:**
 ```modx
 [[!isCrawler:eq=`0`:then=`[[$googleAnalytics]]`]]
 ```
 
+**Fenom:**
+```fenom
+{if $modx->runSnippet('isCrawler', []) == '0'}
+    {$modx->getChunk('googleAnalytics')}
+{/if}
+```
+
 ### Разный контент для бота и человека
+
+**MODX:**
+```modx
+[[!isCrawler:eq=`0`:then=`[[$fullContent]]`:else=`[[$liteContent]]`]]
+```
 
 **Fenom:**
 ```fenom
@@ -272,6 +291,12 @@ FetchIt обрабатывает формы через FormIt на сервер�
 
 Не учитывать ботов в счётчике просмотров товара:
 
+**MODX:**
+```modx
+[[!isCrawler:eq=`0`:then=`[[!msProductViews? &id=`[[*id]]`]]`]]
+```
+
+**Fenom:**
 ```fenom
 {if $modx->runSnippet('isCrawler', []) == '0'}
     {$modx->runSnippet('msProductViews', ['id' => $productId])}
@@ -331,7 +356,13 @@ FetchIt обрабатывает формы через FormIt на сервер�
 
 ### Совместим ли CrawlerDetect с CAPTCHA?
 
-Да. CrawlerDetect можно использовать вместе с reCAPTCHA или другими CAPTCHA: добавьте оба preHook в FormIt, например `&preHooks=\`crawlerDetectBlock,recaptcha\``. CrawlerDetect сработает первым и отсечёт ботов до CAPTCHA.
+Да. CrawlerDetect можно использовать вместе с reCAPTCHA или другими CAPTCHA: добавьте оба preHook в FormIt.
+
+**MODX:** `&preHooks=\`crawlerDetectBlock,recaptcha\``
+
+**Fenom:** `'preHooks' => 'crawlerDetectBlock,recaptcha'`
+
+CrawlerDetect сработает первым и отсечёт ботов до CAPTCHA.
 
 ### Работает ли с AjaxForm?
 

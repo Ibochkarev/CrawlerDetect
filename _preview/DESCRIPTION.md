@@ -37,5 +37,5 @@
 
 ## Стек
 
-- **Backend:** PHP 7.4+, MODX Revolution 3.x, JayBizzle/Crawler-Detect.
+- **Backend:** PHP 8.2+, MODX Revolution 3.x, JayBizzle/Crawler-Detect.
 - **Зависимости:** FormIt (для защиты форм), FetchIt (опционально, для AJAX-форм).

@@ -16,7 +16,7 @@ use MODX\Revolution\modAccessPolicy;
 use MODX\Revolution\modAccessPermission;
 use MODX\Revolution\modAccessPolicyTemplate;
 
-class ModExtraPackage
+class CrawlerDetectPackage
 {
     private $modx;
     private $config = [];
@@ -26,7 +26,7 @@ class ModExtraPackage
     public $builder;
 
     /**
-     * ModExtraPackage constructor.
+     * CrawlerDetectPackage constructor.
      *
      * @param modX $modx
      * @param array $config
@@ -109,7 +109,7 @@ class ModExtraPackage
             'license' => file_get_contents($this->config['core'] . 'docs/license.txt'),
             'readme' => file_get_contents($this->config['core'] . 'docs/readme.txt'),
             'requires' => [
-                'php' => '>=7.4.0',
+                'php' => '>=8.2.0',
                 'modx' => '>=3.0.0',
             ],
         ]);
@@ -183,7 +183,7 @@ class ModExtraPackage
                 "compile" => 0,
                 "update" => 1,
                 "regenerate" => 1,
-                "namespacePrefix" => "ModExtra\\"
+                "namespacePrefix" => "CrawlerDetect\\"
             ]
         );
         $this->modx->log(modX::LOG_LEVEL_INFO, 'Model updated');
@@ -758,7 +758,7 @@ if (!file_exists(dirname(__FILE__) . '/config.inc.php')) {
 $config = require(dirname(__FILE__) . '/config.inc.php');
 require_once MODX_CORE_PATH . 'model/modx/modx.class.php';
 $modx = new modX();
-$install = new ModExtraPackage($modx, $config);
+$install = new CrawlerDetectPackage($modx, $config);
 $builder = $install->process();
 
 if (!empty($config['download'])) {

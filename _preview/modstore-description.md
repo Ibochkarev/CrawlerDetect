@@ -28,7 +28,7 @@
 ## Требования
 
 - MODX Revolution 3.x
-- PHP 7.4+
+- PHP 8.2+
 - FormIt (для защиты форм)
 
 ---
