@@ -1,0 +1,13 @@
+Changelog for CrawlerDetect.
+
+1.0.0-pl
+==============
+- Требуется MODX Revolution 3.x.
+- Поддержка PHP 8.3; минимальная версия PHP по требованиям MODX 3 и JayBizzle/Crawler-Detect.
+- Сниппет isCrawler — определение ботов по User-Agent и заголовку http_from (библиотека JayBizzle/Crawler-Detect).
+- Сниппет crawlerDetectBlock — preHook для FormIt для блокировки отправки форм ботами без CAPTCHA.
+- Интеграция с FormIt (preHooks) и FetchIt (через FormIt).
+- Системные настройки: текст сообщения при блокировке, опция логирования.
+- Зависимость jaybizzle/crawler-detect подключается через Composer; composer install выполняется при сборке пакета, пользователь не запускает Composer при установке.
+- Обновление библиотеки Crawler-Detect — вместе с релизом новой версии дополнения (повышение версии в composer.json и версии пакета).
+- Документация: user-guide.md (руководство пользователя), api.md (API), readme.txt, changelog.txt.

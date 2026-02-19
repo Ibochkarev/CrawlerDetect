@@ -1,0 +1,34 @@
+<h1>CrawlerDetect — защита форм от спама без CAPTCHA</h1>
+
+<p>Определение веб-краулеров (ботов) по User-Agent и блокировка отправки форм ботами. Один preHook для FormIt — и контактные формы, заявки, подписки защищены от спама без CAPTCHA.</p>
+
+<hr>
+
+<h2>Возможности</h2>
+
+<ul>
+<li><strong>Определение ботов</strong> — по User-Agent (библиотека JayBizzle/Crawler-Detect)</li>
+<li><strong>Защита форм</strong> — preHook crawlerDetectBlock для FormIt; работает с FetchIt</li>
+<li><strong>Скрытие виджетов</strong> — сниппет isCrawler для вывода контента только людям (чат, аналитика, счётчики)</li>
+<li><strong>Настройки</strong> — текст сообщения при блокировке, логирование</li>
+</ul>
+
+<hr>
+
+<h2>Быстрый старт</h2>
+
+<p>Добавьте <code>crawlerDetectBlock</code> в preHooks FormIt:</p>
+
+<pre><code>[[!FormIt? &amp;preHooks=`crawlerDetectBlock` &amp;hooks=`email,redirect` ...]]</code></pre>
+
+<p>Форма защищена. Сообщение при блокировке настраивается в системных настройках.</p>
+
+<hr>
+
+<h2>Требования</h2>
+
+<ul>
+<li>MODX Revolution 3.x</li>
+<li>PHP 7.4+</li>
+<li>FormIt (для защиты форм)</li>
+</ul>
