@@ -14,7 +14,7 @@ return [
     'version' => '1.0.0',
     'release' => 'pl',
     // Install package to site right after build
-    'install' => true,
+    'install' => false,
     // Which elements should be updated on package upgrade
     'update' => [
         'chunks' => false,
