@@ -1,0 +1,20 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.0.0-pl] - 2025-02-20
+
+### Added
+- Сниппет isCrawler — определение ботов по User-Agent и заголовку http_from (библиотека JayBizzle/Crawler-Detect)
+- Сниппет crawlerDetectBlock — preHook для FormIt для блокировки отправки форм ботами без CAPTCHA
+- Интеграция с FormIt (preHooks), FetchIt и SendIt (через FormIt)
+- Системные настройки: текст сообщения при блокировке, опция логирования
+- Зависимость jaybizzle/crawler-detect подключается через Composer при сборке пакета (composer install на сервере не требуется)
+- Документация: user-guide.md, api.md, readme.txt, changelog.txt
+
+### Requirements
+- MODX Revolution 3.x
+- PHP 8.2+
