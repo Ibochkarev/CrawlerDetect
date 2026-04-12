@@ -1,7 +1,7 @@
 # CrawlerDetect — API документация
 
-**Версия:** 1.0.0-pl  
-**Базовый namespace:** `crawlerdetect`  
+**Версия:** 1.0.1-pl
+**Базовый namespace:** `crawlerdetect`
 **Ссылки:** [JayBizzle/Crawler-Detect](https://github.com/JayBizzle/Crawler-Detect) | [FormIt](https://docs.modx.com/3.x/ru/extras/formit) | [FetchIt](https://docs.modx.pro/components/fetchit/)
 
 ---
@@ -227,4 +227,5 @@ $matches = $service->getMatches();   // имя бота или пустая ст
 
 | Версия | Изменения |
 |--------|-----------|
+| 1.0.1-pl | Обновление jaybizzle/crawler-detect до v1.3.8 |
 | 1.0.0-pl | Первый релиз: isCrawler, crawlerDetectBlock, интеграция FormIt/FetchIt |

@@ -1,6 +1,6 @@
 {
     "name": "crawlerdetect/crawlerdetect",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "CrawlerDetect for MODX 3 - bot detection and form protection",
     "require": {
         "php": ">=8.2.0",
