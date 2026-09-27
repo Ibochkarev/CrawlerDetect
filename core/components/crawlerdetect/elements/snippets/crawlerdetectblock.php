@@ -26,7 +26,7 @@ if (!$isBot) {
 }
 
 $blockMessage = $modx->getOption('crawlerdetect_block_message', null, 'Не удалось отправить форму. Попробуйте позже.');
-$logBlocked = (bool) $modx->getOption('crawlerdetect_log_blocked', null, false);
+$logBlocked = (bool) $modx->getOption('crawlerdetect_log_blocked', null, true);
 
 if ($logBlocked) {
     $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
