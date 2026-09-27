@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.3-pl] - 2026-09-27
+
+### Fixed
+- Fallback `crawlerdetect_log_blocked` в хуке `crawlerDetectBlock` теперь `true`, как в transport-пакете. Ранее при отсутствии ключа в БД (ручная установка, сбой resolver) блокировки ботов не писались в лог, хотя дефолт пакета — `true`.
+
 ## [1.0.2-pl] - 2026-05-23
 
 ### Changed

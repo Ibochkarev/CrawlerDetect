@@ -11,7 +11,7 @@ if (!defined('MODX_CORE_PATH')) {
 return [
     'name' => 'CrawlerDetect',
     'name_lower' => 'crawlerdetect',
-    'version' => '1.0.2',
+    'version' => '1.0.3',
     'release' => 'pl',
     // Install package to site right after build
     'install' => false,
