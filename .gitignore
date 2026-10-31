@@ -2,3 +2,4 @@
 config.core.php
 .DS_Store
 core/components/crawlerdetect/vendor/
+.DS_Store

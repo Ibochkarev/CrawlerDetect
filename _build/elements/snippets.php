@@ -3,7 +3,7 @@
 return [
     'isCrawler' => [
         'file' => 'iscrawler',
-        'description' => 'Определяет, является ли текущий посетитель ботом (краулером). Возвращает 1 или 0; опционально заполняет плейсхолдер с именем бота.',
+        'description' => 'Detects if the current visitor is a bot (crawler). Returns 1 or 0; optionally fills a placeholder with the bot name.',
         'properties' => [
             'userAgent' => [
                 'type' => 'textfield',
@@ -17,7 +17,7 @@ return [
     ],
     'crawlerDetectBlock' => [
         'file' => 'crawlerdetectblock',
-        'description' => 'PreHook для FormIt: блокирует отправку формы при обнаружении бота, выводит настраиваемое сообщение.',
+        'description' => 'PreHook for FormIt: blocks form submission when a bot is detected, displays a customizable message.',
         'properties' => [],
     ],
 ];
