@@ -3,7 +3,7 @@
 return [
     'block_message' => [
         'xtype' => 'textfield',
-        'value' => 'Не удалось отправить форму. Попробуйте позже.',
+        'value' => 'Could not submit the form. Please try later.',
         'area' => 'crawlerdetect_main',
     ],
     'log_blocked' => [
